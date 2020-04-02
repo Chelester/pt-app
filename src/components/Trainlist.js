@@ -20,14 +20,6 @@ export default function Trainlist() {
         console.log(train[0].date);
     }
 
-    const options = {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric'
-    }
-
     const columns = [
         {
             Header: 'Activity',
@@ -38,7 +30,7 @@ export default function Trainlist() {
         }, {
             Header: 'Date',
             accessor: 'date',
-            Cell: (row) => Intl.DateTimeFormat('default', options).format(row.date)
+            Cell: (row) => (moment(row.original.date, moment.ISO_8601).format())
         }
     ]
 
