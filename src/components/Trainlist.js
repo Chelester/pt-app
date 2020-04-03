@@ -15,11 +15,6 @@ export default function Trainlist() {
         .then(data => setTrain(data.content))
     }
 
-    const handleCheck = () => {
-        console.log(moment(train[0].date, moment.ISO_8601).format());
-        console.log(train[0].date);
-    }
-
     const columns = [
         {
             Header: 'Activity',
@@ -36,7 +31,6 @@ export default function Trainlist() {
 
     return (
         <div>
-            <Button onClick={handleCheck} >Check</Button>
             <ReactTable filterable={true} data={train} columns={columns} />
         </div>
     );
