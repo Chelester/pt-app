@@ -15,6 +15,10 @@ export default function Trainlist() {
         .then(data => setTrain(data.content))
     }
 
+    const trimTime = (link) => {
+        return moment(link.date).toLocaleString()
+    }
+
     const columns = [
         {
             Header: 'Activity',
@@ -25,7 +29,7 @@ export default function Trainlist() {
         }, {
             Header: 'Date',
             accessor: 'date',
-            Cell: (row) => (moment(row.original.date, moment.ISO_8601).format())
+            Cell: row => trimTime(row.original)
         }
     ]
 
