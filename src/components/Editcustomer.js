@@ -46,7 +46,7 @@ export default function Editcustomer(props) {
 
     return(
         <div>
-            <Button color="primary" onClick={handleClickOpen}>Edit Customer</Button>
+            <Button color="primary" onClick={handleClickOpen}>Edit</Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Edit Customer</DialogTitle>
                 <DialogContent>

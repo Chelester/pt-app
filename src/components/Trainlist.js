@@ -15,17 +15,17 @@ export default function Trainlist() {
         .then(data => setTrain(data.content))
     }
 
-    const trimTime = (link) => {
-        return moment(link.date).toLocaleString()
+    const trimTime = (row) => {
+        return moment(row.date).toLocaleString()
     }
 
     const columns = [
         {
             Header: 'Activity',
-            accessor: 'activity'
+            accessor: 'activity',
         }, {
             Header: 'Duration',
-            accessor: 'duration'
+            accessor: 'duration',
         }, {
             Header: 'Date',
             accessor: 'date',

@@ -89,12 +89,12 @@ export default function Customerlist() {
         }, {
             sortable: false,
             filterable: false,
-            width: 150,
+            width: 80,
             Cell: row => <Editcustomer updateCustomer={updateCustomer} customer={row.original} />
         }, {
             sortable: false,
             filterable: false,
-            width: 100,
+            width: 80,
             accessor: 'links[0].href',
             Cell: row => <Button size='small' color='secondary' onClick={() => deleteCustomer(row.value)}>Delete</Button>
         }
